@@ -28,3 +28,11 @@ let episodeTime = 45;
 let commercialTime = 5;
 
 let totalShowTime = (episodeTime + commercialTime) * numberOfSeasons * numberOfEpisodes;
+
+const hoursPerDay = 24;
+
+console.log(hoursPerDay);
+
+const hoursPerDay = 24;
+const minutesPerHour = 60;
+const secondsPerMinute = 60;

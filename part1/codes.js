@@ -104,3 +104,19 @@ console.log(myBook.title);
 let episodeTitle = episode.title;
 let episodeDuration = episode.duration;
 let episodeHasBeenWatched = episode.hasBeenWatched;
+
+// class is like a blueprint for Object
+// how to use below
+class Book {
+  constructor(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+  }
+}
+
+let myBook = new Book('The Story of Tau', 'Will Alexander', 250);
+let mySecondBook = new Book('The Second Story', 'Will Alexander', 320);
+
+console.log(myBook);
+console.log(mySecondBook);

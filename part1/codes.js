@@ -80,7 +80,7 @@ console.log(a + c + b);
 
 // JSON; javascript object notation
 
-let myBook {
+let myBook = {
   title: 'The Story of Tau',
   author: 'Will Alexander',
   numberOfPages: 250,

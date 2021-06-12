@@ -76,3 +76,13 @@ let b = 1;
 let c = "1";
 
 console.log(a + c + b);
+
+
+// JSON; javascript object notation
+
+let myBook {
+  title: 'The Story of Tau',
+  author: 'Will Alexander',
+  numberOfPages: 250,
+  isAvailable: true
+};

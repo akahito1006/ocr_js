@@ -87,7 +87,7 @@ let myBook = {
 };
 
 let episode = {
-  title: "The Story of Tau",
+  title: "the Beginning",
   duration: 60,
   hasBeenWatched: true
 };
@@ -96,3 +96,11 @@ let episode = {
 // JSON; javascript object notation
 // class <= named type
 // key: value
+
+console.log(myBook.title);
+
+// console.log(オブジェクト名.(ドット)キー)
+
+let episodeTitle = episode.title;
+let episodeDuration = episode.duration;
+let episodeHasBeenWatched = episode.hasBeenWatched;

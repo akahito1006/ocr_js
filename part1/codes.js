@@ -78,7 +78,6 @@ let c = "1";
 console.log(a + c + b);
 
 
-// JSON; javascript object notation
 
 let myBook = {
   title: 'The Story of Tau',
@@ -86,3 +85,14 @@ let myBook = {
   numberOfPages: 250,
   isAvailable: true
 };
+
+let episode = {
+  title: "The Story of Tau",
+  duration: 60,
+  hasBeenWatched: true
+};
+
+// Class: Objectに関する属性(attributes)のリスト
+// JSON; javascript object notation
+// class <= named type
+// key: value

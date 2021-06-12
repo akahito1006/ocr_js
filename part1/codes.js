@@ -117,6 +117,25 @@ class Book {
 
 let myBook = new Book('The Story of Tau', 'Will Alexander', 250);
 let mySecondBook = new Book('The Second Story', 'Will Alexander', 320);
+let myThirdBook = new Book('The Third Book', 'Will Alexander', 240);
 
 console.log(myBook);
 console.log(mySecondBook);
+console.log(myThirdBook);
+
+
+class Episode {
+  constructor(title, duration, hasBeenWatched) {
+    this.title = title;
+    this.duration = duration;
+    this.hasBeenWatched = hasBeenWatched;
+  }
+}
+
+let firstEpisode = new Episode('the first episode', 45, true);
+let secondEpisode = new Episode('the second episode', 45, true);
+let thirdEpisode = new Episode('the third episode', 45, false);
+
+// Objects JSON形式のkey/valueのペア。1つの変数に複数の関連データを格納できる
+// Dot notation Object内のvalueにアクセスしたり変更したりする際に使う
+// Classes Objectをより簡単に作成できるようになる。可読性もある。

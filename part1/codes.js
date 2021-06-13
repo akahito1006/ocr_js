@@ -173,3 +173,13 @@ ticketsRemaining = true;
 artistProfile.ticketsRemaining = true;
 
 console.log(allProfile);
+
+let guests = ['will Alexander', 'Sarah Kate', 'Andray Simon'];
+
+
+guests.pop(); // 配列の最後の要素を消す
+guests.push('Tau Perkington'); // 配列の最後に追加する
+guests.unshift('Tau Perkington'); // 配列の最初に追加する
+
+console.log(guests);
+console.log(guests.length); // 配列の要素の数を返す length

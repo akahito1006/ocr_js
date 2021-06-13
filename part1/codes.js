@@ -182,4 +182,4 @@ guests.push('Tau Perkington'); // 配列の最後に追加する
 guests.unshift('Tau Perkington'); // 配列の最初に追加する
 
 console.log(guests);
-console.log(guests.length); // 配列の要素の数を返す length
+console.log(guests.length); // 配列の要素の数を数える

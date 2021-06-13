@@ -139,3 +139,37 @@ let thirdEpisode = new Episode('the third episode', 45, false);
 // Objects JSON形式のkey/valueのペア。1つの変数に複数の関連データを格納できる
 // Dot notation Object内のvalueにアクセスしたり変更したりする際に使う
 // Classes Objectをより簡単に作成できるようになる。可読性もある。
+
+let firstGuest = {name: 'Sarah Kate', vip: true};
+let secondGuest = {name: 'Will Alexander', vip: false};
+
+let guests = [firstGuest, secondGuest];
+
+console.log(guests);
+
+let episodes = [firstEpisode, secondEpisode, thirdEpisode];
+
+
+let numberOfGuests = 5;
+let ticketsRemaining = false;
+let artistName = 'Tau Perkington';
+
+let artistProfile = {
+  numberOfGuests: numberOfGuests,
+  ticketsRemaining: ticketsRemaining,
+  artistName: artistName
+};
+
+let allProfile = [artistProfile];
+
+// 反映されない（variable）
+// コピー元のデータが変わった。先にコピーされたデータは変わらない
+// （値渡し、値型、プリミティブ型）
+ticketsRemaining = true;
+
+// 反映される（Object, Array)
+// データのコピーではなく、メモリ上の場所を参照している
+// （参照渡し、参照型、リファレンス型）
+artistProfile.ticketsRemaining = true;
+
+console.log(allProfile);

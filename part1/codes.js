@@ -183,3 +183,17 @@ guests.unshift('Tau Perkington'); // 配列の最初に追加する
 
 console.log(guests);
 console.log(guests.length); // 配列の要素の数を数える
+
+
+let episodes = [];
+
+episodes.push(firstEpisode);
+episodes.push(secondEpisode);
+episodes.push(thirdEpisode);
+episodes.push(thirdEpisode);
+
+episodes.push(firstEpisode, secondEpisode,thirdEpisode,thirdEpisode)
+
+episodes.pop();
+
+let numberOfEpisodes = episodes.length;

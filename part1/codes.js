@@ -197,3 +197,9 @@ episodes.push(firstEpisode, secondEpisode,thirdEpisode,thirdEpisode)
 episodes.pop();
 
 let numberOfEpisodes = episodes.length;
+
+if (duration == minutesWatched) {
+  this.hasBeenWatched = true;
+} else if (duration > minutesWatched) {
+  this.hasBeenWatched = false;
+}

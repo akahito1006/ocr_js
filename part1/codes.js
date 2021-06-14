@@ -203,3 +203,12 @@ if (duration == minutesWatched) {
 } else if (duration > minutesWatched) {
   this.hasBeenWatched = false;
 }
+
+if (duration == minutesWatched) {
+  this.watchedText = 'Watched';
+} else if (!minutesWatched) {
+  this.watchedText = 'Not yet watched';
+} else {
+  this.watchedText = 'Watching';
+  this.continueWatching = true;
+}

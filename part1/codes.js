@@ -223,3 +223,35 @@ if (minutesWatched === 0) {
 } else {
   this.watchedText = 'Watched';
 }
+
+const firstUser = {
+  name: 'Will Alexander',
+  age: 24,
+  accountLevel: 'normal'
+};
+
+const secondUser = {
+  name: 'Samuel Colt',
+  age: 56,
+  accountLevel: 'Premium'
+};
+
+const thirdUser = {
+  name: 'John Blowning',
+  age: 45,
+  accountLevel: 'Mega-Premium'
+};
+
+switch (firstUser.accountLevel) {
+  case 'normal':
+    console.log('normal User');
+    break;
+  case 'Premium':
+    console.log('Premium User');
+    break;
+  case 'Mega-Premium':
+    console.log('Mega-Premium User');
+    break;
+  default:
+    console.log('Unknown User');
+};

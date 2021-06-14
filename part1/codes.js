@@ -212,3 +212,14 @@ if (duration == minutesWatched) {
   this.watchedText = 'Watching';
   this.continueWatching = true;
 }
+// after refactoring; solution
+this.continueWatching = false;
+
+if (minutesWatched === 0) {
+  this.watchedText = 'Not yet watched';
+} else if (minutesWatched > 0 && duration > minutesWatched) {
+  this.watchedText = 'Watching';
+  this.continueWatching = true;
+} else {
+  this.watchedText = 'Watched';
+}

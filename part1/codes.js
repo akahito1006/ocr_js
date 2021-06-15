@@ -339,3 +339,18 @@ try {
 } catch (error) {
   console.log(error);
 }
+
+// functions
+const calculateAverageRating = (ratings) => {
+  if (ratings.length === 0) {
+    return 0;
+  };
+  // 上のようなifチェックを使う時、elseは必要ない。
+  // 関数ブロック内でreturnが実行されると、ブロック内の処理がそこで終了する。
+  let sum = 0;
+  for (let rating of ratings) {
+    sum += rating;
+  };
+  const result = (sum / ratings.length);
+  return result;
+};

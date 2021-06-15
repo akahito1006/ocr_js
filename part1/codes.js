@@ -395,3 +395,6 @@ const sum = BePolite.add(1,2);
 
 const randomNumber = Math.random();
 const roundMeDown = Math.floor(495.966); // 495
+
+// Instance methods, which act upon individual instances of a class.
+// Static methods, which do not rely on an instance of a class.

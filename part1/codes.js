@@ -255,3 +255,39 @@ switch (firstUser.accountLevel) {
   default:
     console.log('Unknown User');
 };
+
+// for loop
+const numberOfPassengers = 10;
+for (let i = 0; i < numberOfPassengers; i++) {
+  console.log('Passenger boarded!');
+}
+
+// for loop with array
+// for (let i in xxxarayxxx)
+const fruits = [
+  'Orange',
+  'Apple',
+  'Banana',
+  'PineApple'
+]
+for (let i in fruits) {
+  console.log('Im having ' + fruits[i]);
+}
+
+// for (let passenger of passengers)
+// better readablity
+for (let fruit of fruits) {
+  console.log('Im having ' + fruit);
+}
+
+for (let i = 0; i < episodes.length; i++) {
+  episodes[i].hasBeenWatched = false;
+};
+
+for (let i in episodes) {
+  episodes[i].hasBeenWatched = false;
+};
+
+for (let episode of episodes) {
+  episode.hasBeenWatched = false;
+};

@@ -354,3 +354,22 @@ const calculateAverageRating = (ratings) => {
   const result = (sum / ratings.length);
   return result;
 };
+
+class Show {
+  constructor(title, numberOfSeasons) {
+    this.title = title;
+    this.numberOfSeasons = numberOfSeasons;
+    this.ratings = [];
+    this.averageRating = 0;
+  }
+  addRating(newRating) {
+    this.ratings.push(newRating);
+
+    let sum = 0;
+    for (let rating of this.ratings) {
+      sum += rating;
+    }
+    
+    this.averageRating = sum / this.ratings.length;
+  }
+}

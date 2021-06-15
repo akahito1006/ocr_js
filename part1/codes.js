@@ -284,6 +284,7 @@ for (let i = 0; i < episodes.length; i++) {
   episodes[i].hasBeenWatched = false;
 };
 
+// when it was an array
 for (let i in episodes) {
   episodes[i].hasBeenWatched = false;
 };

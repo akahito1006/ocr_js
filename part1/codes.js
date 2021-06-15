@@ -306,3 +306,20 @@ while (seatsLeft > 0 && passengersStillBoard > 0) {
 
 console.log(passengersBoarded);
 // prints 8. as there are 9 passengers for 10seats
+
+// manage errors
+if (seatsRemaining) {
+  passengersBoarded++;
+};
+
+while (seatsRemaining > 0) {
+  passengersBoarded--;
+  seatsRemaining--;
+};
+
+if (seatsRemaining > 0) {
+  passengersBoarded++;
+} else {
+  passengersStillToBoard = 0;
+};
+// worst case is crashing. like by infinite looping

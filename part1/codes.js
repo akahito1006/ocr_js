@@ -307,11 +307,12 @@ while (seatsLeft > 0 && passengersStillBoard > 0) {
 console.log(passengersBoarded);
 // prints 8. as there are 9 passengers for 10seats
 
-// manage errors
+// 1.syntax errors
 if (seatsRemaining) {
   passengersBoarded++;
 };
 
+// 2.logic errors
 while (seatsRemaining > 0) {
   passengersBoarded--;
   seatsRemaining--;
@@ -323,3 +324,18 @@ if (seatsRemaining > 0) {
   passengersStillToBoard = 0;
 };
 // worst case is crashing. like by infinite looping
+
+// 3.runtime errors
+// to check for valid data
+if (dataExists && dataIsValid) {
+  // use data here
+} else {
+  // handle error here
+}
+
+// also try / catch would work fine
+try {
+  // suspicious, questionable error-prone code here
+} catch (error) {
+  console.log(error);
+}

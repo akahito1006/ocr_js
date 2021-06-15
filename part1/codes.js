@@ -372,4 +372,26 @@ class Show {
     
     this.averageRating = sum / this.ratings.length;
   }
+};
+
+// static method as "helper"
+// you dont need to create new object with the class
+class BePolite {
+  static sayHello() {
+    console.log('Hello');
+  }
+  static sayHelloTo(name) {
+    console.log('Hello ' + name + '!');
+  }
+  static add(firstNumber, secondNumber) {
+    return firstNumber + secondNumber
+  }
 }
+
+// as helper
+BePolite.sayHello();
+BePolite.sayHelloTo('Will');
+const sum = BePolite.add(1,2);
+
+const randomNumber = Math.random();
+const roundMeDown = Math.floor(495.966); // 495

@@ -292,3 +292,17 @@ for (let i in episodes) {
 for (let episode of episodes) {
   episode.hasBeenWatched = false;
 };
+
+// while
+let seatsLeft = 10;
+let passengersStillToBoard = 8;
+let passengersBoarded = 0;
+
+while (seatsLeft > 0 && passengersStillBoard > 0) {
+  passengersBoarded++;
+  passengersStillToBoard--;
+  seatsLeft--;
+};
+
+console.log(passengersBoarded);
+// prints 8. as there are 9 passengers for 10seats

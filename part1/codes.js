@@ -398,3 +398,27 @@ const roundMeDown = Math.floor(495.966); // 495
 
 // Instance methods, which act upon individual instances of a class.
 // Static methods, which do not rely on an instance of a class.
+
+// ======================
+
+const createShowComponent = (episode) => {
+  const titleText = episode.title;
+  const seasonsText = episode.numberOfSeasons + ' seasons';
+  const episodesText = episode.episodesPerSeason + ' episodes per season';
+  const component = {
+  titleText: titleText,
+  seasonsText: seasonsText,
+  episodesText: episodesText
+  };
+  // return を忘れない
+  return component;
+};
+
+// ここで、戻り値componentに定数（名前）を付けている
+const tauComponent = createShowComponent(tau);
+const meldrumComponent = createShowComponent(meldrum);
+const claraComponent = createShowComponent(clara);
+
+const showComponents = [tauComponent, meldrumComponent, claraComponent];
+
+// functionは一つのことを行うように書く

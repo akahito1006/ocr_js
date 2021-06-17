@@ -422,3 +422,9 @@ const claraComponent = createShowComponent(clara);
 const showComponents = [tauComponent, meldrumComponent, claraComponent];
 
 // functionは一つのことを行うように書く
+
+// 例：文字列の特徴をまとめて表示させたい場合のfunctionの使い方
+// function1. 単語を数える、戻り値：単語の数
+// function2. 文字を数える、戻り値：文字の数
+// function3. 単語の文字数の平均を計算する、戻り値：その平均値
+// function4. コンソールに文字列の特徴を表示する。function1,2,3の戻り値をまとめて表示する

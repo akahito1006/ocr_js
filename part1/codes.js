@@ -433,3 +433,17 @@ const showComponents = [tauComponent, meldrumComponent, claraComponent];
 // 全部の行にコメントをつけないこと。該当箇所の前の行に書くこと
 // 一列だけのコメントでは、複雑そうなコードである...理由を説明する
 // 複数列に及ぶコメントでは、後に続く処理について一見して把握しにくい場合、その説明をする
+
+// JavaScriptのテスト
+// unit test(単体テスト)
+const getWordCount = (stringToTest) => {
+  const wordArray = stringToTest.split(' ');
+  return wordArray.length;
+}
+// getWordCount() をテストする単体テストの書き方
+const testSimpleWordCount = () => {
+  const testString = 'i have four words';
+  if (getWordCount(testString) !== 4) {
+    console.error('Simple getWordCount failed');
+  }
+}

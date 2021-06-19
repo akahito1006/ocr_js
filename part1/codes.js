@@ -464,3 +464,35 @@ describe('getWordCount()', function() {
 // end to end test(E2E)とも。
 // サインイン→通知を開く→既読にする、一連の流れをテストする
 // サービスで利用する外部リソースもテストの範囲である。（サードパーティの支払いシステムなど）
+
+// recursive function(再帰呼び出し)
+// Redditのようなサイトのコメントをイメージしてみる。
+const commentToTest = {
+  content: '1',
+  subComments: [
+    { content: '1-A', subComments: [] },
+    { content: '1-B', subComments: [
+      { content: '1-B-a', subComments: [] }
+    ] },
+    { content: '1-C', subComments: [
+      { content: '1-C-a', subComments: [
+        { content: '1-C-a-i', subComments: [] },
+        { content: '1-C-a-ii', subComments: [] }
+      ] },
+      { content: '1-C-b', subComments: [] }
+    ] },
+    { content: '1-D', subComments: [] }
+  ]
+};
+
+// commentToTestの内容を１行ずつ下げながらconsoleに表示する
+const getAllComments = (comment) => {
+  let allComments = comment.content;
+  for (let subComment of comment.subComments) {
+    allComments += '\n' + getAllComments(subComment); // 関数自身を呼び出している。同じ構造
+  }
+  // ......
+    // ......
+      // ......
+  return allComments;
+}

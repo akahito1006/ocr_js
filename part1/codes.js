@@ -458,3 +458,9 @@ describe('getWordCount()', function() {
 });
 
 // integration test(結合テスト)
+// 単体、結合テストの考え方はrspecの時と同様
+
+// functional test
+// end to end test(E2E)とも。
+// サインイン→通知を開く→既読にする、一連の流れをテストする
+// サービスで利用する外部リソースもテストの範囲である。（サードパーティの支払いシステムなど）

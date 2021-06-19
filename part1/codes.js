@@ -440,10 +440,21 @@ const getWordCount = (stringToTest) => {
   const wordArray = stringToTest.split(' ');
   return wordArray.length;
 }
-// getWordCount() をテストする単体テストの書き方
+// getWordCount() をテストする簡易なテストの書き方
 const testSimpleWordCount = () => {
   const testString = 'i have four words';
   if (getWordCount(testString) !== 4) {
     console.error('Simple getWordCount failed');
   }
 }
+// しっかりした丁寧なテストを行う段階では、テストフレームワークを使う方が良い
+describe('getWordCount()', function() {
+  it('should find four words', function() {
+    expect(getWordCount('I have four words').to.equal(4));
+  });
+  it('other test', function() {
+    expect(getOtherThing('other result').to.equal(1));
+  });
+});
+
+// integration test(結合テスト)

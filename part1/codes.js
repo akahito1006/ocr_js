@@ -496,3 +496,34 @@ const getAllComments = (comment) => {
       // ......
   return allComments;
 }
+
+// Summary test
+export class Book {
+  constructor(title, author, description, pages, currentPage,read) {
+    this.title = title;
+    this.author = author;
+    this.description = description;
+    this.pages = pages;
+    this.currentPage = currentPage;
+    this.read = read;
+  };
+  readBook(page) {
+    if (page < 1 || this.pages < page) {
+      return 0;
+    } else if (1 <= page && page < this.pages) {
+      this.currentPage = page;
+      return 1;
+    } else if (page == this.pages) {
+      this.currentPage = page;
+      this.read = true;
+      return 1;
+    }
+  }
+ }
+ 
+ const book1 = new Book("title1", "author1", "random description 1", 150, 0, false);
+ const book2 = new Book("title2", "author2", "random description 2", 250, 0, false);
+ const book3 = new Book("title3", "author3", "random description 3", 350, 0, false);
+ 
+ export const books = [book1, book2, book3];
+ 

@@ -537,10 +537,18 @@ const addComma = (value) => {
   return stringNumber;
 }
 
+const toNumber = (value) => {
+  let newValue = value.replace(/,/g, "");
+  let number = parseFloat(newValue);
+  return number;
+}
+
 window.addEventListener('change', () => {
   for (let target of targets) {
     localStorage.setItem(target.className, target.value);
     let commaNumber = addComma(target.value);
     console.log(commaNumber);
+    let number = toNumber(commaNumber);
+    console.log(number);
   }
 });

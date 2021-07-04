@@ -551,4 +551,7 @@ window.addEventListener('change', () => {
     let number = toNumber(commaNumber);
     console.log(number);
   }
+  
+  let targetDiv = document.querySelector("div.place");
+  targetDiv.textContent = localStorage.getItem("test1");
 });

@@ -532,8 +532,15 @@ export class Book {
 
 const targets = document.querySelectorAll("input[type='text']");
 
+const addComma = (value) => {
+  let stringNumber = Number(value).toLocaleString();
+  return stringNumber;
+}
+
 window.addEventListener('change', () => {
   for (let target of targets) {
     localStorage.setItem(target.className, target.value);
+    let commaNumber = addComma(target.value);
+    console.log(commaNumber);
   }
 });

@@ -543,17 +543,17 @@ const toNumber = (value) => {
   return number;
 };
 
-const loadItem = (keyString) => {
-  localStrage.getItem(keyString);
-}
+const loadedItem = (keyString) => {
+  localStorage.getItem(keyString);
+};
 
 const saveItem = (keyString, value) => {
-  localStrage.setItem(keyString, value);
-}
+  localStorage.setItem(keyString, value);
+};
 
 window.addEventListener('change', () => {
   for (let target of targets) {
-    localStorage.setItem(target.className, target.value);
+    saveItem(target.className, target.value);
     let commaNumber = addComma(target.value);
     console.log(commaNumber);
     let number = toNumber(commaNumber);
@@ -561,9 +561,10 @@ window.addEventListener('change', () => {
   }
   
   let targetDiv = "";
+  
   targetDiv = document.querySelector("div.place1");
-  targetDiv.textContent = localStorage.getItem("test1");
+  targetDiv.textContent = loadedItem("test1");
   
   targetDiv = document.querySelector("div.place2");
-  targetDiv.textContent = localStorage.getItem("test2");
+  targetDiv.textContent = loadedItem("test2");
 });

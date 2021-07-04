@@ -535,12 +535,20 @@ const targets = document.querySelectorAll("input[type='text']");
 const addComma = (value) => {
   let stringNumber = Number(value).toLocaleString();
   return stringNumber;
-}
+};
 
 const toNumber = (value) => {
   let newValue = value.replace(/,/g, "");
   let number = parseFloat(newValue);
   return number;
+};
+
+const loadItem = (keyString) => {
+  localStrage.getItem(keyString);
+}
+
+const saveItem = (keyString, value) => {
+  localStrage.setItem(keyString, value);
 }
 
 window.addEventListener('change', () => {
@@ -552,6 +560,10 @@ window.addEventListener('change', () => {
     console.log(number);
   }
   
-  let targetDiv = document.querySelector("div.place");
+  let targetDiv = "";
+  targetDiv = document.querySelector("div.place1");
   targetDiv.textContent = localStorage.getItem("test1");
+  
+  targetDiv = document.querySelector("div.place2");
+  targetDiv.textContent = localStorage.getItem("test2");
 });

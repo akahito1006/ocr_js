@@ -526,4 +526,14 @@ export class Book {
  const book3 = new Book("title3", "author3", "random description 3", 350, 0, false);
  
  export const books = [book1, book2, book3];
- 
+
+
+// how to deal with complicated code like below
+
+const targets = document.querySelectorAll("input[type='text']");
+
+window.addEventListener('change', () => {
+  for (let target of targets) {
+    localStorage.setItem(target.className, target.value);
+  }
+});

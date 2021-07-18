@@ -568,3 +568,12 @@ window.addEventListener('change', () => {
   targetDiv = document.querySelector("div.place2");
   targetDiv.textContent = loadedItem("test2");
 });
+
+
+removePostButton.addEventListener('click', () => {
+  const articleCount = articleSection.childElementCount;
+console.log(articleCount);
+  if(articleCount > 1) {
+    articleSection.removeChild(articleSection.children[articleCount -1]);
+  }
+})

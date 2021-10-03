@@ -23,6 +23,34 @@ Chart.pluginService.register({
         }, chart));
       })
     })
+  },
+  afterDraw: function (chart, easing) {
+    // we don't want the permanent tooltips to animate, so don't do anything till the animation runs atleast once
+    if (!chart.allTooltipsOnce) {
+        if (easing !== 1)
+            return;
+        chart.allTooltipsOnce = true;
+    }
+
+    // eachで回すブロックで1からカウントできるよう設定している
+    cnt = 1;
+    // turn on tooltips
+    chart.options.tooltips.enabled = true;
+    // eachで回す
+    Chart.helpers.each(chart.pluginTooltips, function (tooltip) {
+      //3つ目のBarのみ表示するように設定
+      if (cnt == 3){
+        tooltip.initialize();
+        tooltip.update();
+        // we don't actually need this since we are not animating tooltips
+        tooltip.pivot();
+        tooltip.transition(easing).draw();
+        // 他のデータのtooltipも表示させたいのでtrue
+        chart.options.tooltips.enabled = true;
+      }
+      // プラス1、回す
+      cnt = cnt +1;
+    });
   }
 });
 

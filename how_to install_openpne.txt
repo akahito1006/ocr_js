@@ -1,0 +1,63 @@
+install xampp (below 7.4; 7.4 doesnt support {} syntax)
+  dir: c:\
+
+unzip openpne
+  dir: c:\xampp\htdocs\openpne
+
+copy config files
+  cd openpne
+  cp config/ProjectConfiguration.class.php.sample config/ProjectConfiguration.class.php
+  cp config/OpenPNE.yml.sample config/OpenPNE.yml
+
+edit config/OpenPNE.yml
+  base_url: "http://127.0.0.1/openpne/"
+
+Start Apache and Mysql
+
+install OpenPNE on xampp console
+  *cd openpne
+  php symfony openpne:install
+  $
+    Choose DBMS:
+  　　mysql
+    Type database username
+      root
+  　Type database password (optional)
+
+    Type database hostname
+      localhost  *root@localhost; see Admin of Mysql on xampp window
+    Type database name
+      openpne
+    Type database socket path (optional)
+
+restart Apache and Mysql
+
+access URL
+  http://127.0.0.1/openpne/web/
+  mail: sns@example.com
+  password: password
+
+admin URL
+  http://127.0.0.1/openpne/web/pc_backend.php
+
+
+-------------------------
+access mysql
+  cd c:\xampp\mysql\bin
+  mysql -u root
+
+show members
+  none> show databases;
+  none> use openpne;
+  openpne> show tables;
+  openpne> select * from member
+describe member table
+  opnepne> desc member
+add member
+  openpne> insert into (id, ...) values (2, ...)
+
+delete files for dev environment
+  *cd openpne
+  php symfony project:clear-controllers
+
+メール配信、メール投稿、cron権限
